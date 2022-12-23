@@ -1,0 +1,277 @@
+@include mq(laptop) {
+  .slider {
+    &__title {
+      h2 {
+        font-size: 70px;
+      }
+    }
+
+    &__sign-up {
+      &-description {
+        margin-bottom: 40px;
+        &-title {
+          font-size: 30px;
+        }
+        &-text {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &__item-part-technic-title,
+    &__item-part-technic-count {
+      font-size: 150px;
+    }
+  }
+}
+
+@include mq(tablet) {
+  .slider {
+    height: 100vh;
+    &__title {
+      h2 {
+        top: 25px;
+        font-size: 40px;
+      }
+    }
+
+    &__sign-up {
+      position: relative;
+      top: 130px;
+      margin: 0 auto;
+      max-width: 300px;
+      align-items: center;
+
+      &-description {
+        margin-bottom: 25px;
+
+        &-title {
+          text-align: center;
+          font-size: 18px;
+          line-height: 21px;
+        }
+        &-text {
+          text-align: center;
+          line-height: 19px;
+          font-size: 12px;
+          margin-top: 18px;
+        }
+      }
+
+      &-button {
+        a {
+          width: 291px;
+          height: 51px;
+          font-size: 14px;
+        }
+      }
+    }
+    &__items {
+      flex: 1 1 auto;
+    }
+    &__item {
+      height: auto;
+
+      &-flag {
+        height: fit-content;
+        top: 120px;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &-part {
+        margin-left: 0;
+        &-image {
+          &-technic {
+            max-width: 120%;
+            @include z-index(20);
+          }
+        }
+
+        &-technic {
+          margin-top: 30px;
+          &-title,
+          &-count {
+            font-size: 120px;
+          }
+
+          &-title {
+            margin-bottom: 30px;
+          }
+          &-text {
+            font-size: 12px;
+          }
+          &-list {
+            margin-top: 20px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    // ////
+    &__nav {
+      padding-bottom: 0px;
+
+      &-left,
+      &-right {
+        width: 40px;
+        height: 40px;
+      }
+
+      &-items {
+        li {
+          height: 100px;
+          min-width: 120px;
+          justify-content: center;
+          margin: 0px 0px;
+          img {
+            width: 65px;
+            height: 50px;
+          }
+          img:hover {
+            @include transform-scale(1.2);
+          }
+
+          img.active {
+            @include transform-scale(1.2);
+          }
+
+          span {
+            font-size: 12px;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mq(mobile) {
+  .slider {
+    height: 100vh;
+    &__title {
+      h2 {
+        top: 0px;
+        position: relative;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 40px;
+      }
+    }
+
+    &__sign-up {
+      position: relative;
+      top: 0px;
+      margin: 0 auto;
+      max-width: 300px;
+      align-items: center;
+
+      &-description {
+        margin-bottom: 25px;
+
+        &-title {
+          text-align: center;
+          font-size: 18px;
+          line-height: 21px;
+        }
+        &-text {
+          text-align: center;
+          line-height: 19px;
+          font-size: 12px;
+          margin-top: 18px;
+        }
+      }
+
+      &-button {
+        a {
+          width: 291px;
+          height: 51px;
+          font-size: 14px;
+        }
+      }
+    }
+    &__items {
+      flex: 1 1 auto;
+    }
+    &__item {
+      height: auto;
+      margin-bottom: 0px;
+
+      &-flag {
+        height: fit-content;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &-part {
+        margin-left: 0;
+        &-image {
+          &-technic {
+            max-width: 120%;
+            z-index: 20;
+          }
+        }
+
+        &-technic {
+          margin-top: 60px;
+          &-title,
+          &-count {
+            font-size: 70px;
+          }
+
+          &-title {
+            margin-bottom: 60px;
+          }
+          &-text {
+            font-size: 12px;
+          }
+          &-list {
+            margin-top: 20px;
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    // ////
+    &__nav {
+      display: block;
+      overflow: scroll;
+      padding-bottom: 0px;
+
+      &-left,
+      &-right {
+        display: none;
+      }
+
+      &-items {
+        li {
+          height: 100px;
+          min-width: 120px;
+          justify-content: center;
+          flex-direction: column;
+          margin: 0px 0px;
+          img {
+            width: 65px;
+            height: 50px;
+          }
+          img:hover {
+            @include transform-scale(1.2);
+          }
+
+          img.active {
+            @include transform-scale(1.2);
+          }
+
+          span {
+            font-size: 12px;
+            margin-top: 4px;
+          }
+        }
+      }
+    }
+  }
+}
