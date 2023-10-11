@@ -1,12 +1,14 @@
 @include mq(laptop) {
   .slider {
     &__title {
+      z-index: 999;
       h2 {
         font-size: 70px;
       }
     }
 
     &__sign-up {
+      z-index: 999;
       &-description {
         margin-bottom: 40px;
         &-title {
@@ -86,7 +88,9 @@
         &-image {
           &-technic {
             max-width: 120%;
-            @include z-index(20);
+            // @include z-index(20);
+            position: absolute;
+            z-index: 20;
           }
         }
 
@@ -241,7 +245,7 @@
       display: block;
       overflow: scroll;
       padding-bottom: 0px;
-
+      z-index: 999;
       &-left,
       &-right {
         display: none;

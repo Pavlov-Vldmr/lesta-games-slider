@@ -57,10 +57,6 @@ table {
   justify-content: center;
 }
 
-.slider__item-part-image-technic, .slider__item-flag, .slider__sign-up-button a::before, .slider__sign-up, .slider__title h2, .slider__gradient {
-  position: absolute;
-}
-
 body {
   font-family: "Roboto";
   color: #F9F5E1;
@@ -74,7 +70,8 @@ body {
   flex-direction: column;
 }
 .slider__gradient {
-  z-index: 5;
+  position: absolute;
+  z-index: 50;
   top: 0;
   left: 0;
   height: 100%;
@@ -91,16 +88,18 @@ body {
 .slider__title {
   display: flex;
   justify-content: center;
+  z-index: 999;
 }
 .slider__title h2 {
-  z-index: 99;
+  position: absolute;
   font-size: 85px;
   font-weight: 800;
   top: 61px;
   text-align: center;
 }
 .slider__sign-up {
-  z-index: 98;
+  position: absolute;
+  z-index: 999;
   top: 30%;
   display: flex;
   align-items: flex-start;
@@ -145,6 +144,7 @@ body {
 .slider__sign-up-button a::before {
   content: "";
   display: block;
+  position: absolute;
   z-index: -1000;
   top: 0;
   left: 0;
@@ -162,7 +162,8 @@ body {
   margin-bottom: -128px;
 }
 .slider__item-flag {
-  z-index: 5;
+  position: absolute;
+  z-index: 888;
   top: 0;
   left: 0;
   height: 100%;
@@ -180,12 +181,11 @@ body {
 }
 .slider__item-part-image-technic {
   max-width: 70%;
-  z-index: auto;
+  position: absolute;
 }
 .slider__item-part-technic {
   flex-direction: column;
   position: relative;
-  z-index: 99;
 }
 .slider__item-part-technic-title, .slider__item-part-technic-count {
   text-align: center;
@@ -219,13 +219,13 @@ body {
   flex-direction: row;
   padding-bottom: 40px;
   position: relative;
-  z-index: 99;
+  z-index: 999;
 }
 .slider__nav-left::before {
-  background-image: url(../../assets/icons/arrow-left.svg);
+  background-image: url(../assets/icons/arrow-left.svg);
 }
 .slider__nav-right::before {
-  background-image: url(../../assets/icons/arrow-right.svg);
+  background-image: url(../assets/icons/arrow-right.svg);
 }
 .slider__nav-left::before, .slider__nav-right::before {
   filter: invert(1);
@@ -237,10 +237,10 @@ body {
   background-position: center;
 }
 .slider__nav-left {
-  background-image: url(../../assets/icons/arrow-left.svg);
+  background-image: url(../assets/icons/arrow-left.svg);
 }
 .slider__nav-right {
-  background-image: url(../../assets/icons/arrow-right.svg);
+  background-image: url(../assets/icons/arrow-right.svg);
 }
 .slider__nav-left, .slider__nav-right {
   background-repeat: no-repeat;
@@ -301,8 +301,14 @@ body {
 }
 
 @media (max-width: 1367px) {
+  .slider__title {
+    z-index: 999;
+  }
   .slider__title h2 {
     font-size: 70px;
+  }
+  .slider__sign-up {
+    z-index: 999;
   }
   .slider__sign-up-description {
     margin-bottom: 40px;
@@ -369,6 +375,7 @@ body {
   }
   .slider__item-part-image-technic {
     max-width: 120%;
+    position: absolute;
     z-index: 20;
   }
   .slider__item-part-technic {
@@ -494,6 +501,7 @@ body {
     display: block;
     overflow: scroll;
     padding-bottom: 0px;
+    z-index: 999;
   }
   .slider__nav-left, .slider__nav-right {
     display: none;

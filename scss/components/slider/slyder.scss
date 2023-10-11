@@ -6,7 +6,9 @@
   flex-direction: column;
 
   &__gradient {
-    @include z-index(5);
+    position: absolute;
+    z-index: 50;
+    // @include z-index(5);
     top: 0;
     left: 0;
     height: 100%;
@@ -25,9 +27,11 @@
   &__title {
     display: flex;
     justify-content: center;
+    z-index: 999;
     h2 {
       @extend %text-uppercase;
-      @include z-index(99);
+      position: absolute;
+      // @include z-index(99);
       @include font-size-weight(85px, 800);
       top: 61px;
       text-align: center;
@@ -35,7 +39,9 @@
   }
 
   &__sign-up {
-    @include z-index(98);
+    position: absolute;
+    // @include z-index(98);
+    z-index: 999;
     top: 30%;
     display: flex;
     align-items: flex-start;
@@ -90,7 +96,9 @@
       a::before {
         content: "";
         display: block;
-        @include z-index(-1000);
+        position: absolute;
+        z-index: -1000;
+        // @include z-index(-1000);
         top: 0;
         left: 0;
         width: 100%;
@@ -115,7 +123,9 @@
     margin-bottom: -128px;
 
     &-flag {
-      @include z-index(5);
+      position: absolute;
+      // @include z-index(10);
+      z-index: 888;
       top: 0;
       left: 0;
       height: 100%;
@@ -135,7 +145,8 @@
       &-image {
         &-technic {
           max-width: 70%;
-          @include z-index(auto);
+          position: absolute;
+          // @include z-index(20);
         }
       }
 
@@ -143,7 +154,7 @@
         @extend %flex-center;
         flex-direction: column;
         position: relative;
-        z-index: 99;
+        // z-index: 99;
 
         &-title,
         &-count {
@@ -183,13 +194,13 @@
     flex-direction: row;
     padding-bottom: 40px;
     position: relative;
-    z-index: 99;
+    z-index: 999;
 
     &-left::before {
-      background-image: url(../../assets/icons/arrow-left.svg);
+      background-image: url(../assets/icons/arrow-left.svg);
     }
     &-right::before {
-      background-image: url(../../assets/icons/arrow-right.svg);
+      background-image: url(../assets/icons/arrow-right.svg);
     }
 
     &-left::before,
@@ -204,10 +215,10 @@
     }
 
     &-left {
-      background-image: url(../../assets/icons/arrow-left.svg);
+      background-image: url(../assets/icons/arrow-left.svg);
     }
     &-right {
-      background-image: url(../../assets/icons/arrow-right.svg);
+      background-image: url(../assets/icons/arrow-right.svg);
     }
 
     &-left,

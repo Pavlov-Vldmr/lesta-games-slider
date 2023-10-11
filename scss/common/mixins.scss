@@ -7,7 +7,7 @@
     -webkit-transform: scale($scale);
     transform: scale($scale);
 }
-@mixin z-index($index){
-    @extend %pos-absolute;
-    z-index: $index;
-}
+// @mixin z-index($index){
+//     @extend %pos-absolute;
+//     z-index: $index;
+// }
